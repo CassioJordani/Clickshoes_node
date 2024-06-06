@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/estilo.css">
+    <title><%= produto.nome %> - Detalhes</title>
+</head>
+<body>
+    <div class="container">
+        <h1><%= produto.nome %></h1>
+        <% if (produto.imagem) { %>
+            <img src="<%= produto.imagem %>" alt="<%= produto.nome %>" class="product-image">
+        <% } %>
+        <p class="price">Preço: R$ <%= produto.preco %></p>
+        <p class="category">Categoria: <%= produto.categoria %></p>
+        <!-- Adicione mais detalhes ou informações sobre o produto aqui -->
+        <a href="/" class="a">Voltar à lista de produtos</a>
+
+    </div>
+</body>
+</html>

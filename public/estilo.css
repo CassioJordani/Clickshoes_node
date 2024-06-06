@@ -1,0 +1,390 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #0f471c;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0px 20px;
+}
+
+.link-text {
+    text-decoration: none;
+    color: #333;
+    padding-left: 20px;
+}
+
+.link-text:hover {
+    text-decoration: none;
+    color: #929292;
+}
+
+.link-text2 {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.link-text2:hover {
+    text-decoration: none;
+    color: #3fc46b;
+}
+
+.search-form {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-select {
+    padding: 8px;
+    margin-right: 10px;
+}
+
+.button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+.product-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-item {
+    width: calc(50% - 10px); /* Define a largura de cada item */
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.product-item-group {
+    width: 48%; /* Define a largura de cada grupo de itens */
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-inline {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os elementos do formulário */
+}
+
+.quantity-input {
+    width: 50px; /* Define a largura do input da quantidade */
+    margin-right: 10px; /* Adiciona espaço entre o input e o botão */
+}
+
+.product-item a {
+    text-decoration: none;
+    color: #333;
+}
+
+.product-item h2 {
+    margin-bottom: 5px;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.category {
+    color: #888;
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #0f471c;
+    color: #fff;
+}
+
+.product-image {
+    max-width: 100%; /* Ajusta o tamanho máximo da imagem */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.button-remove {
+    background-color: #ff6347; /* Cor de fundo vermelha */
+    color: #fff; /* Cor do texto branca */
+    border: none;
+}
+
+.button-remove:hover {
+    background-color: #ff4332; /* Cor de fundo vermelha mais escura ao passar o mouse */
+    align-items: center;
+}
+
+/* Adicione estilos para a lista de produtos no carrinho */
+.carrinho-list {
+    list-style: none;
+    padding: 0;
+}
+
+.carrinho-item {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.carrinho-item img {
+    max-width: 100px; /* Ajuste o tamanho máximo da imagem */
+    height: auto;
+    margin-right: 10px;
+}
+
+.carrinho-item h2 {
+    margin-bottom: 5px;
+}
+
+.carrinho-item .price {
+    font-weight: bold;
+}
+
+.carrinho-item .quantity {
+    color: #888;
+}
+
+/* estilo.css */
+
+.cart-icon-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.cart-icon {
+    width: 30px; /* Define a largura do ícone do carrinho */
+    padding-right: 5px;
+    height: auto;
+}
+
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .product-item-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item {
+        width: 100%;
+    }
+}
+
+
+/* para o curso */
+.body-style {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container-style {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 900px;
+    margin-bottom: 300px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.course-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.submit-button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+.course-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.course-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.course-info {
+    font-size: 16px;
+}
+
+.edit-link,
+.delete-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.delete-button {
+    background-color: #f44336;
+}
+
+.add-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.button-group {
+    display: inline;
+}
+
+.scrollable-container {
+    max-height: 400px; /* Altura máxima do contêiner antes da rolagem */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando necessário */
+}
+
+.course-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.course-table th, .course-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.course-table th {
+    background-color: #f0f0f0;
+}
+
+.welcome-text {
+    margin-bottom: 20px;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    background-color: #1a5a1e;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.nav-link:hover {
+    background-color: #ddd;
+}
+
+.login-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lojinha</title>
+    <link rel="stylesheet" type="text/css" href="/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Clickshoes</h1>
+        <a href="/carrinho" class="cart-icon-link" class="link-text2"><img src="/icones/carrinho-icone.png" alt="Carrinho" class="cart-icon">Carrinho</a>
+        <a href="/login" class="link-text2">Login</a>
+    </header>
+    
+    <div class="container">
+        <form action="/" method="GET" class="search-form">
+            <select name="categoria" class="category-select">
+                <option value="0">Escolha a categoria</option>
+                <option value="tenis">Tênis</option>
+                <option value="sapatenis">Sapatênis</option>
+                <option value="bota">Bota</option>
+                <option value="chinelo">Chinelo</option>
+                <option value="outro">Outro</option>
+            </select>
+            <button type="submit" class="button">Filtrar</button>
+            <a href="/add" class="link-text">Adicionar Produto</a>
+        </form>
+        
+        <ul class="product-list">
+            <% produtos.forEach(function(produto){ %>
+                <li class="product-item">
+                    <a href="/produto/<%= produto.nome %>">
+                        <h2><%= produto.nome %></h2>
+                        <% if (produto.imagem) { %>
+                            <img src="<%= produto.imagem %>" alt="<%= produto.nome %>" class="product-image">
+                        <% } %>
+                        <p class="price">Preço: R$ <%= produto.preco %></p>
+                        <p class="category">Categoria: <%= produto.categoria %></p>
+                    </a>
+                    <form action="/remover" method="POST">
+                        <input type="hidden" name="nome" value="<%= produto.nome %>">
+                        <button type="submit" class="button button-remove">Remover</button>
+                    </form>
+                    <form action="/adicionar-ao-carrinho" method="POST" class="form-inline">
+                        <input type="hidden" name="nome" value="<%= produto.nome %>">
+                        <label for="quantidade-<%= produto.nome %>">Quantidade:</label>
+                        <input type="number" name="quantidade" value="1" min="1" class="quantity-input">
+                        <button type="submit" class="button">Adicionar ao carrinho</button>
+                    </form>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+
+    <footer>
+        <p>Clickshoes. Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

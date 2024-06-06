@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Produto</title>
+    <link rel="stylesheet" type="text/css" href="/estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Adicionar Produto</h1>
+        <form action="/add" method="POST" enctype="multipart/form-data" class="add-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+            <br>
+            <label for="preco">Preço:</label>
+            <input type="text" id="preco" name="preco">
+            <br>
+            <label for="categoria">Categoria:</label>
+            <input type="text" id="categoria" name="categoria">
+            <br>
+            <label for="imagem">Imagem:</label>
+            <input type="file" id="imagem" name="imagem">
+            <br>
+            <button type="submit" class="button">Adicionar Produto</button>
+        </form>
+        <a href="/">Voltar à lista de produtos</a>
+    </div>
+</body>
+</html>

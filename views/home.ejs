@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="/estilo.css">
+</head>
+<body class="body-style">
+    <div class="container-style">
+        <h1 class="welcome-text">Bem-vindo, <%= user.email %>!</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="/add-produto" class="nav-link">Cadastrar Produto</a></li>
+                <li><a href="/list-produtos" class="nav-link">Listar Produtos</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- carrinho.ejs -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" type="text/css" href="/estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Carrinho de Compras</h1>
+        <% if (carrinho.length === 0) { %>
+            <p>O carrinho está vazio.</p>
+        <% } else { %>
+            <ul class="carrinho-list">
+                <% carrinho.forEach(function(item){ %>
+                    <li class="carrinho-item">
+                        <h2><%= item.nome %></h2>
+                        <% if (item.imagem) { %>
+                            <img src="<%= item.imagem %>" alt="<%= item.nome %>">
+                        <% } %>
+                        <p class="price">Preço: R$ <%= item.preco %></p>
+                        <p class="quantity">Quantidade: <%= item.quantidade %></p>
+                        <form action="/remover-do-carrinho" method="POST">
+                            <input type="hidden" name="nome" value="<%= item.nome %>">
+                            <button type="submit" class="button button-remove">Remover</button>
+                        </form>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } %>
+        <a href="/">Voltar à lista de produtos</a>
+    </div>
+</body>
+</html>
